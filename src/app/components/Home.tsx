@@ -2,14 +2,15 @@ import Image from "next/image";
 
 export const HomePage = () => {
   return (
-    <div className="w-[1000px] h-[600px] bg-black">
-      home
+    <div className="w-full h-full flex justify-center">
+      <div></div>
       <Image
         src={"/learningPhoto1.png"}
         alt="Learning Photo"
-        width={500}
-        height={300}
+        width={1200}
+        height={600}
       />
+      <div></div>
     </div>
   );
 };
