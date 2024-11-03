@@ -1,15 +1,4 @@
-type SlideType = {
-  title: string;
-  description: string;
-};
-
-type DataType = {
-  lector: string;
-  way: string;
-  slides: SlideType[];
-
-  description: string;
-};
+import { DataType } from "./Types";
 
 export const EnglishLearningWaysData: DataType[] = [
   {
@@ -17,11 +6,11 @@ export const EnglishLearningWaysData: DataType[] = [
     way: "Repeat learning every day",
     slides: [
       {
-        title: "Why it is best to learn English",
+        title: "Why it is best to learning",
         description: "Sample Description",
       },
       {
-        title: "how to study this skill?",
+        title: "How to study this skill?",
         description: "Sample Description",
       },
     ],
@@ -29,11 +18,11 @@ export const EnglishLearningWaysData: DataType[] = [
   },
   {
     lector: "Ankhbayar",
-    way: "Repeat learning every day",
+    way: "Undefined",
     slides: [
       {
-        title: "Why it is best to learn English",
-        description: "Sample Description",
+        title: "Undefined",
+        description: "undefinied",
       },
       {
         title: "how to study this skill?",

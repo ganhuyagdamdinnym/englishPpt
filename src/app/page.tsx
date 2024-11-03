@@ -9,7 +9,7 @@ const category = ["Home", "About", "Contact", "Projects"];
 const myProjects = ["English", "Ethics"];
 export default function Home() {
   const [categoryStatus, setCategoryStatus] = useState<string>("Home");
-  const [projectName, setProjectName] = useState<string>("");
+  const [selectedProjectName, setSelectedProjectName] = useState<string>("");
   const [selectProjectStatus, setSelectProjectStatus] =
     useState<string>("Home");
   const handlerStatus = (item: string) => {
@@ -19,9 +19,11 @@ export default function Home() {
     } else {
       setSelectProjectStatus("");
       setCategoryStatus(item);
+      setSelectedProjectName("");
     }
   };
   const handleProjectSelect = (projectName: string) => {
+    setSelectedProjectName(projectName);
     setSelectProjectStatus("");
   };
   return (
@@ -74,15 +76,12 @@ export default function Home() {
         className="w-full h-[90%] bg-[red]"
         style={{ backgroundImage: 'url("/learningPhoto1.png")' }}
       >
-        <EnglishPpt />
-        {/* <Image
-          src={"/learningPhoto1.png"}
-          alt="Learning Photo"
-          width={1200}
-          height={600}
-        /> */}
+        {categoryStatus === "Projects" ? (
+          <div className="w-full h-full">
+            {selectedProjectName === "English" ? <EnglishPpt /> : null}
+          </div>
+        ) : null}
       </div>
-      {/* <HomePage /> */}
     </div>
   );
 }
