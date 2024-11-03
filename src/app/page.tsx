@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { HomePage } from "./components/Home";
 import { useState } from "react";
-import { set } from "mongoose";
 import { EnglishPpt } from "./components/EnglishPpt";
 
 const category = ["Home", "About", "Contact", "Projects"];
