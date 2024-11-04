@@ -3,10 +3,12 @@ import Image from "next/image";
 import { HomePage } from "./components/Home";
 import { useState } from "react";
 import { EnglishPpt } from "./components/EnglishPpt";
+import { useRouter } from "next/navigation";
 
 const category = ["Home", "About", "Contact", "Projects"];
 const myProjects = ["English", "Ethics"];
 export default function Home() {
+  const router = useRouter();
   const [categoryStatus, setCategoryStatus] = useState<string>("Home");
   const [selectedProjectName, setSelectedProjectName] = useState<string>("");
   const [selectProjectStatus, setSelectProjectStatus] =
@@ -22,6 +24,9 @@ export default function Home() {
     }
   };
   const handleProjectSelect = (projectName: string) => {
+    if (projectName == "Ethics") {
+      router.push("/ethics");
+    }
     setSelectedProjectName(projectName);
     setSelectProjectStatus("");
   };

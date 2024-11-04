@@ -3,15 +3,15 @@ import { DataType } from "./Types";
 export const EnglishLearningWaysData: DataType[] = [
   {
     lector: "Damdinnym",
-    way: "Repeat learning every day",
+    way: "Daily Repetition is the Key to Lasting Learning",
     slides: [
       {
         title: "Why it is best to learning",
         description: "Sample Description",
       },
       {
-        title: "How to study this skill?",
-        description: "Sample Description",
+        title: "Making Daily Repetition a Habit",
+        description: "Consistency Over Quantity",
       },
     ],
     description: "Sample Description",
