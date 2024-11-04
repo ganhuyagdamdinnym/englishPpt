@@ -22,7 +22,7 @@ const Slides = () => {
   };
 
   return (
-    <div className="w-screen h-screen pt-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4 overflow-scroll">
+    <div className="w-screen h-screen pt-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4 overflow-scroll scrollbar-hide">
       <p className="fixed h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
         {whichSlide}
       </p>
@@ -31,9 +31,9 @@ const Slides = () => {
       <Image
         src={"/rightArrow.svg"}
         alt="left arrow"
-        height={40}
-        width={40}
-        className="rotate-180 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-140"
+        height={20}
+        width={20}
+        className="rotate-180 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[2]"
         onClick={handlePrev}
       />
 
@@ -52,9 +52,9 @@ const Slides = () => {
       <Image
         src={"/rightArrow.svg"}
         alt="right arrow"
-        height={40}
-        width={40}
-        className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[1.3]"
+        height={20}
+        width={20}
+        className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[2]"
         onClick={handleNext}
       />
     </div>
