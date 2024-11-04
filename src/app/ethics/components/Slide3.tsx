@@ -3,19 +3,16 @@ export const Slide3 = () => {
   return (
     <div className="flex flex-col-reverse gap-4 lg:flex-row  justify-between items-center text-center bg-[#048c6b] rounded-lg p-8 lg:p-[100px] w-full max-w-6xl">
       <div className="w-full lg:w-[400px] flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
-        {/* <h2 className="text-2xl lg:text-3xl w-40 rounded-2xl flex justify-center items-center font-bold bg-white text-[#048c6b]">
-          Сэдэв
-        </h2> */}
         <h1 className="text-3xl lg:text-2xl font-extrabold text-white my-2">
-          Олон төрлийн мэргэжлүүдийг ойлгохын ач холбогдол
+          Багийн ажиллагаанд үзүүлэх нөлөө
         </h1>
         <p className="text-white text-lg mb-4">
-          Дасан зохицох чадвар: Олон төрлийн ажлын орчинд дасан зохицож,
-          хэрэгцээтэй ур чадваруудыг эзэмших боломжтой.
+          Бусадтай ойлголцох чадвар: Өөр салбарын хүмүүсийн ажлын арга барилыг
+          ойлгож, тэдэнтэй хамтарч ажиллахад дөхөмтэй болно.
         </p>
         <p className="text-white text-lg mb-4">
-          Өөрийгөө хөгжүүлэх: Мэргэжлүүдийн уялдаа холбоог ойлгосноор илүү сайн
-          шийдвэр гаргаж, өөрийгөө хөгжүүлэх боломжтой.
+          Бүтээлч сэтгэлгээ: Өөр өөр мэргэжлүүдийн арга барил, аргачлалаас санаа
+          авч, асуудлыг бүтээлчээр шийдвэрлэх боломжтой.
         </p>
 
         <button
@@ -27,7 +24,7 @@ export const Slide3 = () => {
       </div>
       <div className="relative w-48 h-48 border-2 lg:w-96 lg:h-96 mb-4 rounded-full overflow-hidden lg:border-[8px] border-white">
         <Image
-          src="/learningPhoto1.png"
+          src="/teamWork.png"
           alt="Team Working"
           layout="fill"
           objectFit="cover"

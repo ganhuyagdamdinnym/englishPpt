@@ -22,7 +22,7 @@ const Slides = () => {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#00765a] flex justify-between items-center gap-2">
+    <div className="w-screen h-screen pt-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4">
       <p className="fixed h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
         {whichSlide}
       </p>
@@ -33,7 +33,7 @@ const Slides = () => {
         alt="left arrow"
         height={40}
         width={40}
-        className="rotate-180 cursor-pointer"
+        className="rotate-180 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-140"
         onClick={handlePrev}
       />
 
@@ -54,7 +54,7 @@ const Slides = () => {
         alt="right arrow"
         height={40}
         width={40}
-        className="cursor-pointer"
+        className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[1.3]"
         onClick={handleNext}
       />
     </div>

@@ -4,7 +4,7 @@ export const Slide2 = () => {
     <div className="flex flex-col-reverse gap-4 lg:flex-row  justify-between items-center text-center bg-[#048c6b] rounded-lg p-8 lg:p-[100px] w-full max-w-6xl">
       <div className="relative w-48 h-48 border-2 lg:w-96 lg:h-96 mb-4 rounded-full overflow-hidden lg:border-[8px] border-white">
         <Image
-          src="/learningPhoto1.png"
+          src="/dollar.png"
           alt="Team Working"
           layout="fill"
           objectFit="cover"
@@ -12,15 +12,15 @@ export const Slide2 = () => {
       </div>
       <div className="w-full lg:w-[400px] flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
         <h1 className="text-3xl lg:text-2xl font-extrabold text-white my-2">
-          Олон төрлийн мэргэжлүүдийг ойлгохын ач холбогдол
+          Ажил эрхлэлтийн зах зээлд давуу тал
         </h1>
         <p className="text-white text-lg mb-4">
-          Дасан зохицох чадвар: Олон төрлийн ажлын орчинд дасан зохицож,
-          хэрэгцээтэй ур чадваруудыг эзэмших боломжтой.
+          Шинэ боломжууд: Шинэ салбар, шинэ чиглэлд ажиллах, цаашлаад өөрийн
+          хүсэл сонирхолд нийцсэн ажилд орж болно.
         </p>
         <p className="text-white text-lg mb-4">
-          Өөрийгөө хөгжүүлэх: Мэргэжлүүдийн уялдаа холбоог ойлгосноор илүү сайн
-          шийдвэр гаргаж, өөрийгөө хөгжүүлэх боломжтой.
+          Өрсөлдөх чадвар: Олон чиглэлийн ур чадвартай болсноор ажлын зах зээлд
+          бусдаас ялгарах боломжтой.
         </p>
 
         <button
