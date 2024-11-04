@@ -22,11 +22,7 @@ const Slides = () => {
   };
 
   return (
-    <div className="w-screen h-screen pb-12 pt-12 lg:pt-4 lg:pb-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4 overflow-scroll scrollbar-hide">
-      <p className="fixed h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
-        {whichSlide}
-      </p>
-
+    <div className="w-screen h-screen pb-12 pt-[200px] lg:pt-4 lg:pb-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4 overflow-scroll scrollbar-hide">
       {/* Left Arrow */}
       <Image
         src={"/rightArrow.svg"}
@@ -57,6 +53,9 @@ const Slides = () => {
         className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[2]"
         onClick={handleNext}
       />
+      {/* <p className="h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
+        {whichSlide}
+      </p> */}
     </div>
   );
 };
