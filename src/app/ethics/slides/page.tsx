@@ -22,7 +22,7 @@ const Slides = () => {
   };
 
   return (
-    <div className="w-screen h-screen pt-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4">
+    <div className="w-screen h-screen pt-4 bg-[#00765a] flex justify-between items-center gap-2 pl-4 pr-4 overflow-scroll">
       <p className="fixed h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
         {whichSlide}
       </p>
