@@ -31,7 +31,7 @@ export const Slide4 = () => {
           onClick={() => router.push("/ethics/someJobsAbout")}
           className="bg-[#00765a] w-40 text-white font-semibold px-6 py-2 rounded-full hover:bg-green-400"
         >
-          ys zui
+          Ажлын байрны ёс зүй
         </button>
       </div>
     </div>

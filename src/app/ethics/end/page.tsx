@@ -4,7 +4,7 @@ export default function End() {
   return (
     <div
       style={{ backgroundImage: 'url("/thankyou.png")' }}
-      className="w-screen h-screen"
+      className="w-screen h-screen bg-cover bg-no-repeat bg-center"
     ></div>
     // <div className="flex flex-col items-center justify-center h-screen text-center bg-[#048c6b] text-white">
     //   <h1 className="text-4xl lg:text-6xl font-bold mb-4">Баярлалаа!</h1>
