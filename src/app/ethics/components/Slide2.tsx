@@ -22,13 +22,6 @@ export const Slide2 = () => {
           Өрсөлдөх чадвар: Олон чиглэлийн ур чадвартай болсноор ажлын зах зээлд
           бусдаас ялгарах боломжтой.
         </p>
-
-        <button
-          //   onClick={() => router.push("/ethics/slides")}
-          className="bg-[#00765a] w-40 text-white font-semibold px-6 py-2 rounded-full hover:bg-green-400"
-        >
-          Start Slide
-        </button>
       </div>
     </div>
   );

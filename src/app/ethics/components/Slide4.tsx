@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export const Slide4 = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col gap-4 lg:flex-row  justify-between items-center text-center bg-[#048c6b] rounded-lg p-8 lg:p-[100px] w-full max-w-6xl">
       <div className="p-2 border-4 border-[#07b98e] rounded-full flex justify-center items-center">
@@ -26,10 +28,10 @@ export const Slide4 = () => {
         </p>
 
         <button
-          //   onClick={() => router.push("/ethics/slides")}
+          onClick={() => router.push("/ethics/someJobsAbout")}
           className="bg-[#00765a] w-40 text-white font-semibold px-6 py-2 rounded-full hover:bg-green-400"
         >
-          Start Slide
+          ys zui
         </button>
       </div>
     </div>

@@ -56,7 +56,7 @@ const Slides = () => {
       {/* <p className="h-10 w-full text-xl font-medium bottom-0 text-white flex justify-center items-center">
         {whichSlide}
       </p> */}
-    </div>
+    </div> 
   );
 };
 

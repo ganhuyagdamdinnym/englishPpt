@@ -14,13 +14,6 @@ export const Slide1 = () => {
           Өөрийгөө хөгжүүлэх: Мэргэжлүүдийн уялдаа холбоог ойлгосноор илүү сайн
           шийдвэр гаргаж, өөрийгөө хөгжүүлэх боломжтой.
         </p>
-
-        <button
-          //   onClick={() => router.push("/ethics/slides")}
-          className="bg-[#00765a] w-40 text-white font-semibold px-6 py-2 rounded-full hover:bg-green-400"
-        >
-          Start Slide
-        </button>
       </div>
       <div className="relative w-48 h-48 border-2 lg:w-96 lg:h-96 mb-4 rounded-full overflow-hidden lg:border-[8px] border-white">
         <Image
