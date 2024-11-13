@@ -57,7 +57,7 @@ export default function Home() {
         className="w-full h-24 bg-black fixed top-0 flex items-center justify-between pl-8 pr-[200px]"
         style={{ opacity: 0.8 }}
       >
-        <Image src="/Logo.png" alt="Team Logo" width={50} height={50} />
+        <Image src="/logo.png" alt="Team Logo" width={50} height={50} />
         <div className="w-96 h-full flex justify-between items-center">
           {category.map((item, index) => (
             <div key={index}>
