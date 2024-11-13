@@ -8,6 +8,8 @@ export const EnglishPpt = () => {
   const [currentData, setCurrrentData] = useState<DataType>();
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [endText, setEndText] = useState<string>("");
+  const [rotate, setRotate] = useState(false); // State to trigger rotation
+  const [rotateleft, setRotateleft] = useState(false);
 
   const switchLector = (index: number) => {
     setSlideIndex(0); // Reset slide index
@@ -22,6 +24,7 @@ export const EnglishPpt = () => {
     if (slideIndex > 0) {
       setSlideIndex(slideIndex - 1);
     }
+    setRotateleft(true);
   };
 
   const handleSlideIndexAdd = () => {
@@ -34,14 +37,35 @@ export const EnglishPpt = () => {
       setEndText("Thanks for give attention");
       setSlideIndex(-1);
     }
+    setRotate(true); // Trigger rotation on click
   };
 
   useEffect(() => {
     setCurrrentData(EnglishLearningWaysData[0]); // Load initial data
   }, []);
 
+  // Reset rotation effect after the animation completes
+  useEffect(() => {
+    if (rotate) {
+      const timer = setTimeout(() => setRotate(false), 500); // Reset after 500ms (animation duration)
+      return () => clearTimeout(timer);
+    }
+  }, [rotate]);
+
+  useEffect(() => {
+    if (rotateleft) {
+      const timer = setTimeout(() => setRotateleft(false), 500); // Reset after 500ms (animation duration)
+      return () => clearTimeout(timer);
+    }
+  }, [rotateleft]);
+
   return (
-    <div className="w-full h-full flex flex-col items-center justify-between pt-24 bg-gray-900 text-white">
+    <div
+      style={{
+        backgroundImage: `url(${currentData?.slides[slideIndex]?.image})`,
+      }}
+      className="w-full h-full flex flex-col items-center justify-between bg-no-repeat bg-cover bg-center pt-24 bg-gray-900 text-white"
+    >
       <div className="w-full h-[80%] flex items-center justify-between px-10">
         <Image
           onClick={handleMinusSlideIndex}
@@ -52,11 +76,28 @@ export const EnglishPpt = () => {
           width={40}
           className="cursor-pointer hover:scale-105 transition-transform shadow-lg"
         />
-        <div className="w-[600px] h-full bg-gray-800 rounded-md shadow-md flex items-center justify-center">
-          {endText == "" ? (
-            <h1 className="text-2xl font-semibold text-gray-100">
-              {currentData?.slides[slideIndex].title}
-            </h1>
+        <div
+          className={`w-[600px] min-h-[200px] bg-gray-800 ${
+            rotateleft ? "left" : ""
+          } rounded-md shadow-md flex items-center justify-center ${
+            rotate ? "rotate" : ""
+          }`} // Apply rotation class conditionally
+        >
+          {endText === "" ? (
+            <div className="flex flex-col justify-center items-center p-12">
+              <h1 className="text-2xl font-semibold text-gray-100 mb-4">
+                {currentData?.slides[slideIndex].title}
+              </h1>
+              <div className="text-xl font-medium text-gray-100 space-y-2">
+                {currentData?.slides[slideIndex]?.description.map(
+                  (e, index) => (
+                    <p key={index}>
+                      {index + 1}.{e}
+                    </p>
+                  )
+                )}
+              </div>
+            </div>
           ) : (
             <h1 className="text-3xl font-semibold text-gray-100">{endText}</h1>
           )}
@@ -84,6 +125,31 @@ export const EnglishPpt = () => {
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        @keyframes rotate-center {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
+        }
+        @keyframes rotate-left {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotateY(-360deg);
+          }
+        }
+        .rotate {
+          animation: rotate-center 1s ease-in-out;
+        }
+        .left {
+          animation: rotate-left 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };
